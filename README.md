@@ -5,7 +5,7 @@
 
 The goal of this project was to find the best spot/city (worldwide) to place the offices of a newly created company in the **gaming industry** taking into account the preferences of the employees.
 
-<img src="images/title_image.jpg" width="570"/> <img src="images/globe.jpg" width="150.9"/> 
+<img src="images/title_image.jpg" width="600"/> <img src="images/globe.jpg" width="159"/> 
 
 ## 2- Rationale
 The starting point is a collection composed of roughly 18,000 companies, which needed to be **filtered** according to the needs of the company, mainly:
@@ -15,7 +15,7 @@ The starting point is a collection composed of roughly 18,000 companies, which n
 
 Out of the ~18,000 companies, **285** are purely gaming companies (**gaming hub**). If *design* and *tech* tags are included in the filters (**gaming-tech-design hub**), then **430** companies remain. The top five cities in each case are:
 
-<img src="images/number_companies_gaming.jpg" width="350"/> <img src="images/number_companies.jpg" width="350"/>
+<img src="images/number_companies_gaming.jpg" width="370"/> <img src="images/number_companies.jpg" width="370"/>
 
 *Note: less nº of companies are observed in San Francisco when considering the gaming-tech-design hub because an additional categorical filter was applied in order to narrow the search.*
 

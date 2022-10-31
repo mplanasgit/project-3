@@ -83,7 +83,7 @@ Finally, interactive maps were built for each city. Markers were added and visua
 Click here to see the maps of: [San Francisco](images/sanfran_map.html), [New York](images/newyork_map.html), [South San Francisco](images/south_sanfran_map.html) and [London](images/london_map.html).
 
 ### Map of San Francisco
-![map_sanfrancisco](images/sanfran_map.jpg)
+<img src="images/sanfran_map.jpg" width="1000"/>
 
 ### Map of New York
 ![map_newyork](images/newyork_map.jpg)

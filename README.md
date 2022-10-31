@@ -3,17 +3,17 @@
 
 ## 1- Main objective
 
-The goal of this project was to find the best spot/city (worldwide) to place the offices of a newly created company in the **gaming industry** taking into account the preferences of the employees.
+The goal of this project was to find the best spot/city (worldwide) to place the offices of a newly created company in the **gaming industry** taking into account the preferences of its employees.
 
 <img src="images/title_image.jpg" width="600"/> <img src="images/globe.jpg" width="159"/> 
 
 ## 2- Rationale
 The starting point is a collection composed of roughly 18,000 companies, which needed to be **filtered** according to the needs of the company, mainly:
 
-- To be in a city with a gaming industry hub: this is a gaming company, which woud like to outsource and establsih collaborations with other companies in the industry.
-- To be in a city with successful (>$1M money raised) companies in the design and tech industries, as it is required by roughly **40%** of our employees (designers and developers).
+- To be in a city with a **gaming industry hub**: this is a gaming company, which would like to outsource and establish collaborations with other companies in the industry. Therefore, being surrounded by other gaming companies is a must.
+- To be in a city with successful (>$1M money raised) companies in the design and tech industries, as it is required by roughly **40%** of the employees (designers and developers).
 
-Out of the ~18,000 companies, **285** are purely gaming companies (**gaming hub**). If *design* and *tech* tags are included in the filters (**gaming-tech-design hub**), then **430** companies remain. The top five cities in each case are:
+Thus, filtering the collection using these two initial requirements would help us identify those cities with a potential hub. Out of the ~18,000 companies, **285** are purely gaming companies (**gaming hub**). If *design* and *tech* tags are included in the filters (**gaming-tech-design hub**), then **430** companies remain. The top five cities in each case are:
 
 <img src="images/number_companies_gaming.jpg" width="370"/> <img src="images/number_companies.jpg" width="370"/>
 
@@ -22,10 +22,10 @@ Out of the ~18,000 companies, **285** are purely gaming companies (**gaming hub*
 Based on this, four cities were chosen for further analysis: San Francisco, New York, South San Francisco (for its proximity to San Francisco) and London. 
 
 ### Stealing coordinates:
-- The filtered companies were mapped on each of these cities. 
-- The **most centric company (the one surrounded by all the other companies)** was chosen and its coordinates were used for requesting the remaining requirements of the employees in [Foursquare](https://location.foursquare.com/developer/reference/place-search).
+- First, the filtered companies were mapped on each of these cities. 
+- Then, the **most centric company (the one surrounded by all the other companies)** was chosen and its coordinates were used for requesting the remaining requirements of the employees in [Foursquare](https://location.foursquare.com/developer/reference/place-search).
 
-The following figure shows the maps of San Francisco (left) and New York (right). The red arrow indicates the most centric company.
+The following figure shows the maps of San Francisco (left) and New York (right), and the markers correspond to the filtered companies. The red arrow indicates the most centric company.
 
 <img src="images/sanfran_companies_modified.jpg" width="236.5"/> <img src="images/newyork_companies_modfied.jpg" width="270"/>
 

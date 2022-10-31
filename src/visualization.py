@@ -1,6 +1,6 @@
 # This document contains the functions to be used for visualizing data
 # ----------------------------------------------------------------------------------------------------
-#  
+  
 # Libraries
 
 import folium

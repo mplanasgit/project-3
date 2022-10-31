@@ -1,4 +1,4 @@
-# This document contains the functions to be used for requesting data from foursquare
+# This document contains the functions to be used for exploring the crunchbase database
 # ----------------------------------------------------------------------------------------------------
 
 # Libraries

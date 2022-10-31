@@ -67,7 +67,7 @@ Next, the **distance** between the chosen coordinates and each category (*query*
 
 In order to calculate a final score, the weighted averaged distances were added. The final score was normalized as **percentage** based on the **minimum value of the comparison**. Thus, a score of 100% is the perfect score between the compared cities, and values (N) above 100 indicate that the categories are, in average, **+ N % more distant** from the company's coordinates.
 
-And the winner is... **San Francisco!** The coordinates of the potential company are: (37.781929, -122.404176).
+And the winner is... **San Francisco!** The coordinates of the potential company are: (37.781929, -122.404176).  
 New York came as a close second.
 
 <img src="images/final_score.jpg" width="500"/>
@@ -93,7 +93,7 @@ Click here to see the maps of: [San Francisco](images/sanfran_map.html), [New Yo
 **Legend:**
 | Category                         | Icon           | Color     |
 | -------------------------------- | -------------- | --------- |
-| **The company location**         | Diamond        | Black     |
+| **The location of the company**  | Diamond        | Black     |
 | Airports                         | Plane          | Purple    |
 | Basketball stadiums              | Football ball  | Orange    |
 | Night clubs                      | Cocktail glass | Red       |

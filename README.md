@@ -15,7 +15,7 @@ The starting point is a collection composed of roughly 18,000 companies, which n
 
 Thus, filtering the collection using these two initial requirements would help us identify those cities with a potential hub. Out of the ~18,000 companies, **285** are purely gaming companies (**gaming hub**). If *design* and *tech* tags are included in the filters (**gaming-tech-design hub**), then **430** companies remain. The top five cities in each case are:
 
-<img src="images/number_companies_gaming.jpg" width="370"/> <img src="images/number_companies.jpg" width="370"/>
+<img src="images/number_companies_gaming.jpg" width="370"/> <img src="images/number_companies.jpg" width="370"/> 
 
 *Note: less nº of companies are observed in San Francisco when considering the gaming-tech-design hub because an additional categorical filter was applied in order to narrow the search.*
 

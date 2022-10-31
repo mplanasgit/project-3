@@ -5,7 +5,7 @@
 
 The goal of this project was to find the best spot/city (worldwide) to place the offices of a newly created company in the **gaming industry** taking into account the preferences of the employees.
 
-![gaming](images/title_image.jpg)
+<img src="images/title_image.jpg" width="570"/> <img src="images/globe.jpg" width="150.9"/> 
 
 ## 2- Rationale
 The starting point is a collection composed of roughly 18,000 companies, which needed to be **filtered** according to the needs of the company, mainly:
@@ -15,13 +15,13 @@ The starting point is a collection composed of roughly 18,000 companies, which n
 
 Out of the ~18,000 companies, **285** are purely gaming companies (**gaming hub**). If *design* and *tech* tags are included in the filters (**gaming-tech-design hub**), then **430** companies remain. The top five cities in each case are:
 
-<img src="images/number_companies_gaming.jpg" width="420"/> <img src="images/number_companies.jpg" width="420"/>
+<img src="images/number_companies_gaming.jpg" width="350"/> <img src="images/number_companies.jpg" width="350"/>
 
 *Note: less nº of companies are observed in San Francisco when considering the gaming-tech-design hub because an additional categorical filter was applied in order to narrow the search.*
 
 Based on this, four cities were chosen for further analysis: San Francisco, New York, South San Francisco (for its proximity to San Francisco) and London. 
 
-#### Stealing coordinates
+### Stealing coordinates:
 - The filtered companies were mapped on each of these cities. 
 - The **most centric company (the one surrounded by all the other companies)** was chosen and its coordinates were used for requesting the remaining requirements of the employees in [Foursquare](https://location.foursquare.com/developer/reference/place-search).
 
@@ -38,7 +38,7 @@ Based on the employees' requirements, foursquare was used to request information
 - The **category** in foursquare (second number, a foursquare ID).
 - The maximum number of results to return (**limit**). 
 
-The resuls were sorted by **distance**. The requirements of the employees can be seen below:
+The resuls were sorted by **distance**. The requirements of the employees can be seen below in an extracted piece of code:
 
 ```python
 schools = getFoursquareCategory("school", city, 2000, 12058, token_fsq, limit=5)
@@ -54,7 +54,7 @@ vegan = getFoursquareCategory("vegan restaurant", city, 2000, 13377, token_fsq, 
 
 Next, the **distance** between the chosen coordinates and each category (*query* in foursquare) was extracted from the results of the request. In the case of the **nearby companies**, which were also included in the final table, the distance was calculated using a function that considered their latitude and longitude coordinate values.
 
-**Considerations:**
+### Considerations:
 - Each category was assigned a **weight** value according to their importance. This is a value that goes from 0 to 1, and adds up to 1 all categories considered. The **importance** was decided based on two main factors: 
     1. The **amount of employees** that have that requirement.
     2. How common it is to find that requirement in a city.  
@@ -73,7 +73,6 @@ New York came as a close second.
 <img src="images/final_score.jpg" width="500"/>
 
 <br>
-<br>
 
 ![San_Francisco](images/sanfrancisco_panorama.jpg)
 
@@ -83,14 +82,15 @@ Finally, interactive maps were built for each city. Markers were added and visua
 
 Click here to see the maps of: [San Francisco](images/sanfran_map.html), [New York](images/newyork_map.html), [South San Francisco](images/south_sanfran_map.html) and [London](images/london_map.html).
 
-#### Map of San Francisco
+### Map of San Francisco
 ![map_sanfrancisco](images/sanfran_map.jpg)
 
-#### Map of New York
+### Map of New York
 ![map_newyork](images/newyork_map.jpg)
 
 <br>
 
+**Legend:**
 | Category                         | Icon           | Color     |
 | -------------------------------- | -------------- | --------- |
 | Airports                         | Plane          | Purple    |

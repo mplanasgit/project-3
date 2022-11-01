@@ -101,7 +101,7 @@ And the winner is... **San Francisco!** The coordinates of the potential company
 ![San_Francisco](images/sanfrancisco_panorama.jpg)
 
 
-**Future impromevents**
+**Future improvements:**
 - Instead of analyzing one company (location) per city, iterate over **all the gaming companies in SF and New York** in Foursquare. Then, calculate the weighted average distance of each category/activity for each company in order to obtain the best location within the city.
 - Complement this information with **real state data**. Is the difference in pricing (renting a property) of distinct neighbourhoods big enough to justify one location over another one? 
 

@@ -13,7 +13,28 @@ The starting point is a collection composed of roughly 18,000 companies, which n
 - To be in a city with a **gaming industry hub**: this is a gaming company, which would like to outsource and establish collaborations with other companies in the industry. Therefore, being surrounded by other gaming companies is a must.
 - To be in a city with successful (>$1M money raised) companies in the design and tech industries, as it is required by roughly **40%** of the employees (designers and developers).
 
-Thus, filtering the collection using these two initial requirements would help us identify those cities with a potential hub. Out of the ~18,000 companies, **285** are purely gaming companies (**gaming hub**). If *design* and *tech* tags are included in the filters (**gaming-tech-design hub**), then **430** companies remain. The top five cities in each case are:
+Thus, filtering the collection using these two initial requirements would help us identify those cities with a potential hub. 
+
+See below the filter applied to select **gaming** companies:
+
+```python
+# Necessary filters: Companies whose 'offices' field is not empty and who have raised more than 1M $/€
+office_filter = {'offices' : {"$ne" : []}}
+money_filter = {'total_money_raised' : {"$regex" : ".*\d+[MB]"}}
+necessary = {"$and" : [office_filter, money_filter]}
+
+# If I only consider gaming companies:
+tag_filter = {'tag_list' : {"$regex": ".*gaming.*|.*game.*"}}
+overview_filter = {'overview' : {"$regex": ".*gaming.*|.*game.*"}}
+
+projection = {"_id":0, "name":1, 'total_money_raised':1, 'offices':1, 'tag_list':1}
+
+companies = list(c.find({"$or": [{"$and": [necessary, tag_filter]},
+                                 {"$and": [necessary, overview_filter]}
+                                        ]}, projection))
+```
+
+Out of the ~18,000 companies, **285** are purely gaming companies (**gaming hub**). If *design* and *tech* tags are included in the filters (**gaming-tech-design hub**), then **430** companies remain. The top five cities in each case are:
 
 <img src="images/number_companies_gaming.jpg" width="370"/> <img src="images/number_companies.jpg" width="370"/> 
 
@@ -52,7 +73,8 @@ vegan = getFoursquareCategory("vegan restaurant", city, 2000, 13377, token_fsq, 
 
 ## 4- Building distance tables
 
-Next, the **distance** between the chosen coordinates and each category (*query* in foursquare) was extracted from the results of the request. In the case of the **nearby companies**, which were also included in the final table, the distance was calculated using a function that considered their latitude and longitude coordinate values.
+- Next, the **distance** between the chosen coordinates and each category (*query* in foursquare) was extracted from the results of the request. 
+- In the case of the **nearby companies**, which were also included in the final table, the distance was calculated using a function that considered their latitude and longitude coordinate values. *Note: only the companies within a 5 km radius were considered.*
 
 ### Considerations:
 - Each category was assigned a **weight** value according to their importance. This is a value that goes from 0 to 1, and adds up to 1 all categories considered. The **importance** was decided based on two main factors: 
@@ -68,7 +90,8 @@ Next, the **distance** between the chosen coordinates and each category (*query*
 In order to calculate a final score, the weighted averaged distances were added. The final score was normalized as **percentage** based on the **minimum value of the comparison**. Thus, a score of 100% is the perfect score between the compared cities, and values (N) above 100 indicate that the categories are, on average, **+ N % more distant** from the company's coordinates.
 
 And the winner is... **San Francisco!** The coordinates of the potential company are: (37.781929, -122.404176).  
-New York came as a close second.
+
+- New York came as a close second. Interestingly enough, New York lost to SF due to the distance of the company to other gaming-tech-design companies, which are more scattered than in SF. On the contrary, the other activities/categories are more packed around the company's coordinates than in SF (see maps below).
 
 <img src="images/final_score.jpg" width="500"/>
 

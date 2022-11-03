@@ -45,7 +45,7 @@ Based on this, four cities were chosen for further analysis: San Francisco, New 
 
 ### Stealing coordinates:
 - First, the filtered companies were mapped on each of these cities. 
-- Then, the **most centric company (the one surrounded by all the other companies)** was chosen and its coordinates were used for requesting the remaining requirements of the employees in [Foursquare](https://location.foursquare.com/developer/reference/place-search).
+- Then, the **most centric company (the one surrounded by all the other companies)** was chosen to minimize the distance to all the other companies and its coordinates were used for requesting the remaining requirements of the employees in [Foursquare](https://location.foursquare.com/developer/reference/place-search).
 
 The following figure shows the maps of San Francisco (left) and New York (right), and the markers correspond to the filtered companies. The red arrow indicates the most centric company.
 

@@ -111,7 +111,7 @@ And the winner is... **San Francisco!** The coordinates of the potential company
 
 Finally, interactive maps were built for each city. Markers were added and visualized with different icons and colors depending on the category. For clarification, see the legend below the pictures.
 
-Click here to see the maps of: [San Francisco](images/sanfran_map.html), [New York](images/newyork_map.html), [South San Francisco](images/south_sanfran_map.html) and [London](images/london_map.html).
+Click here to see the maps of: [San Francisco](https://mplanasgit.github.io/sanfran_map.html), [New York](https://mplanasgit.github.io/newyork_map.html), [South San Francisco](https://mplanasgit.github.io/south_sanfran_map.html) and [London](https://mplanasgit.github.io/london_map.html).
 
 ### Map of San Francisco
 ![map_sanfran](images/sanfran_map.jpg)
